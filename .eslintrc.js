@@ -9,7 +9,6 @@ module.exports = {
     "plugin:react/recommended",
     "plugin:prettier/recommended",
   ],
-  //   extends: ["eslint:recommended", "plugin:react/recommended"],
   parserOptions: {
     ecmaFeatures: {
       jsx: true,
@@ -20,5 +19,7 @@ module.exports = {
   plugins: ["react"],
   rules: {
     "react/react-in-jsx-scope": "off",
+    "react/prop-types": "off",
+    "no-unused-vars": "off",
   },
 };
