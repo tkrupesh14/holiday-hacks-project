@@ -15,9 +15,11 @@
 
 ## Tech Stack
 
-1. React JS SPA library
-2. Chakra UI for styling
-3. Deployment via Netlify
+1. [Alan AI](https://alan.app/) - Voice Assisted AI
+2. [React JS](https://reactjs.org/) - SPA library
+3. [Chakra UI](https://chakra-ui.com/) - for styling
+4. [Netlify](https://www.netlify.com/) - Deployment and Hosting
+4. [libreTranslation](https://github.com/LibreTranslate/LibreTranslate) - for getting Translation
 
 ## Features:
 
