@@ -35,10 +35,11 @@ export const Translation = ({ appState, setAppState }) => {
             my="4"
             px="4"
             mx="auto"
+            maxW="16"
             minH="20"
             maxH="xs"
             fontSize="sm"
-            overflow="scroll"
+            overflow="hidden"
           >
             {translatedText}
           </Text>
