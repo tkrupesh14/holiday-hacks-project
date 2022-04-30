@@ -1,19 +1,20 @@
-import { Link } from "react-router-dom";
 import React from "react";
+import { Link } from "react-router-dom";
+import { MoonIcon, SunIcon } from "@chakra-ui/icons";
 import {
+  Box,
   Flex,
   Button,
   Heading,
+  Spinner,
   Container,
   useColorMode,
 } from "@chakra-ui/react";
-import { MoonIcon, SunIcon } from "@chakra-ui/icons";
 
-export const Layout = (props) => {
+export const Layout = ({ appState, setAppState, children }) => {
+  const { appLoading } = appState;
   const { colorMode, toggleColorMode } = useColorMode();
-  const handleToggleColor = () => {
-    toggleColorMode();
-  };
+  const handleToggleColor = () => toggleColorMode();
 
   return (
     <Container maxW="container.xl">
@@ -28,16 +29,22 @@ export const Layout = (props) => {
         pr={{ base: "10", lg: 0 }}
       >
         <Heading fontSize="xl" textDecoration="none">
-          <Link to="/">Home</Link>
+          <Link to="/">Translation</Link>
         </Heading>
-        <Heading fontSize="xl">
+        {/* <Heading fontSize="xl">
           <Link to="/about">About</Link>
-        </Heading>
+        </Heading> */}
         <Button size="sm" onClick={handleToggleColor}>
           {colorMode === "light" ? <MoonIcon /> : <SunIcon />}
         </Button>
       </Flex>
-      {props.children}
+      {appLoading ? (
+        <Flex minH="90vh" alignItems="center" justifyContent="center">
+          <Spinner size="xl" color="blue.300" />
+        </Flex>
+      ) : (
+        <Box mt="4">{children}</Box>
+      )}
     </Container>
   );
 };

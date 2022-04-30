@@ -16,10 +16,13 @@ module.exports = {
     ecmaVersion: "latest",
     sourceType: "module",
   },
-  plugins: ["react"],
+  plugins: ["react", "prettier"],
   rules: {
     "react/react-in-jsx-scope": "off",
     "react/prop-types": "off",
     "no-unused-vars": "off",
+    "no-constant-condition": "off",
+    "no-undef": "error",
+    "no-duplicate-case": "off",
   },
 };
