@@ -12,7 +12,6 @@ export const Translation = ({ appState, setAppState }) => {
       <Flex direction="column" gap="4" px={{ base: "10" }}>
         <Box
           py="2"
-          minW="md"
           px="auto"
           textAlign="center"
           borderWidth="1px"
@@ -35,10 +34,9 @@ export const Translation = ({ appState, setAppState }) => {
             my="4"
             px="4"
             mx="auto"
-            maxW="16"
             minH="20"
             maxH="xs"
-            fontSize="sm"
+            fontSize={{ base: "md", md: "lg" }}
             overflow="hidden"
           >
             {translatedText}
